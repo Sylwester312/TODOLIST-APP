@@ -1,0 +1,7 @@
+<div class="category-detail" *ngIf="category">
+    <h2>Szczegóły kategorii</h2>
+    <p><strong>ID:</strong> {{ category.id }}</p>
+    <p><strong>Nazwa:</strong> {{ category.name }}</p>
+
+    <button routerLink="/categories">Wróć</button>
+</div>

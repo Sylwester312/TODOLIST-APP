@@ -1,0 +1,10 @@
+<div class="task-detail" *ngIf="task; else loading">
+    <h2>{{ task.title }}</h2>
+    <p><strong>Opis:</strong> {{ task.description }}</p>
+    <p><strong>Status:</strong> {{ task.status }}</p>
+    <p><strong>Kategoria:</strong> {{ task.category?.name || 'Brak' }}</p>
+</div>
+
+<ng-template #loading>
+    <p>Ładowanie zadania...</p>
+</ng-template>

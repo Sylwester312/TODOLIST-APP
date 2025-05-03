@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class SignUpComponent {
   signUpForm: FormGroup;
+  errorMessage: any;
+  password: any;
 
   constructor(
     private fb: FormBuilder,

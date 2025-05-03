@@ -1,0 +1,14 @@
+<div class="category-list">
+    <h2>Twoje kategorie</h2>
+
+    <ul *ngIf="categories.length; else empty">
+        <li *ngFor="let category of categories">
+            <span>{{ category.name }}</span>
+            <button (click)="deleteCategory(category.id)">Usuń</button>
+        </li>
+    </ul>
+
+    <ng-template #empty>
+        <p>Brak kategorii do wyświetlenia.</p>
+    </ng-template>
+</div>
