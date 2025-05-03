@@ -1,0 +1,20 @@
+<div class="task-list">
+    <h2>Twoje zadania</h2>
+
+    <div *ngIf="tasks.length === 0" class="no-tasks">
+        Brak zadań do wyświetlenia.
+    </div>
+
+    <ul *ngIf="tasks.length > 0">
+        <li *ngFor="let task of tasks" class="task-item">
+            <div class="task-header">
+                <strong>{{ task.title }}</strong>
+                <span class="status">{{ task.status }}</span>
+            </div>
+            <p>{{ task.description }}</p>
+            <div class="actions">
+                <button (click)="deleteTask(task.id)">Usuń</button>
+            </div>
+        </li>
+    </ul>
+</div>
