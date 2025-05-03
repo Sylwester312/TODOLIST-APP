@@ -1,0 +1,12 @@
+<div class="auth-form">
+    <h2>Logowanie</h2>
+    <form (ngSubmit)="onSubmit()" #signInForm="ngForm">
+        <input type="email" name="email" [(ngModel)]="email" placeholder="Email" required />
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Hasło" required />
+        <button type="submit" [disabled]="signInForm.invalid">Zaloguj się</button>
+
+        <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </form>
+
+    <p>Nie masz konta? <a routerLink="/sign-up">Zarejestruj się</a></p>
+</div>
